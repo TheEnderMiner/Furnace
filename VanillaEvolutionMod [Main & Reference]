@@ -1,0 +1,49 @@
+package com.evep.evepmod;
+
+import org.apache.logging.log4j.Logger;
+
+import com.evep.evepmod.gen.OreGen;
+import com.evep.evepmod.init.VanillaEvolutionBlocks;
+import com.evep.evepmod.init.VanillaEvolutionCrafting;
+import com.evep.evepmod.init.VanillaEvolutionItems;
+import com.evep.evepmod.proxy.CommonProxy;
+import com.evep.evepmod.tabs.BlocksTab;
+import com.evep.evepmod.tabs.BuildingTab;
+import com.evep.evepmod.tabs.DessertTab;
+import com.evep.evepmod.tabs.ElementTab;
+import com.evep.evepmod.tabs.FoodTab;
+import com.evep.evepmod.tabs.HeroTab;
+import com.evep.evepmod.tabs.OresTab;
+import com.evep.evepmod.tabs.ResourceTab;
+import com.evep.evepmod.tabs.SeedTab;
+import com.evep.evepmod.tabs.ToolsTab;
+import com.evep.evepmod.util.handlers.FuelHandler;
+
+import net.minecraft.block.state.pattern.BlockMatcher;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Instance;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+@Mod(modid = VanillaEvolutionMod.MODID, name = VanillaEvolutionMod.NAME, version = VanillaEvolutionMod.VERSION, acceptedMinecraftVersions = VanillaEvolutionMod.ACCEPTED_MINECRAFT_VERSIONS)
+public class VanillaEvolutionMod
+{
+
+	public static final int gui_nickel_furnace = 0;
+	
+    public static final String MODID = "evep";
+    public static final String NAME = "Vanilla Evolution";
+    public static final String VERSION = "0.3";
+    public static final String ACCEPTED_MINECRAFT_VERSIONS = "[1.12.2]";
+   
+	public static final String CLIENT_PROXY_CLASS = "com.evep.evepmod.proxy.ClientProxy";
+	public static final String COMMON_PROXY_CLASS = "com.evep.evepmod.proxy.CommonProxy";
+
+    private static Logger logger;
+   }
