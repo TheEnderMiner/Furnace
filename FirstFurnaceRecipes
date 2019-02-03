@@ -23,7 +23,6 @@ public class FirstFurnaceRecipes {
 	
 	private FirstFurnaceRecipes() 
 	{
-		//addSinteringRecipe(new ItemStack(Blocks.ACACIA_FENCE), new ItemStack(Blocks.ACACIA_FENCE_GATE), new ItemStack(BlockInit.COPPER_CHEST), 5.0F);
 	}
 
 	
