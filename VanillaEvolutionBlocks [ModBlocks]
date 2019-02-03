@@ -1,0 +1,15 @@
+package com.evep.evepmod.init;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.evep.evepmod.VanillaEvolutionMod;
+import com.evep.evepmod.blocks.furnaces.BlockNickelFurnace;
+
+@Mod.EventBusSubscriber(modid=VanillaEvolutionMod.MODID)
+public class VanillaEvolutionBlocks {
+	
+	public static final List<Block> BLOCKS = new ArrayList<Block>();
+	
+	public static final Block nickel_furnace = new BlockNickelFurnace("nickel_furnace"); 
+ }
