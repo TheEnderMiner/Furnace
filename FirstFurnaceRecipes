@@ -3,11 +3,13 @@ package com.evep.evepmod.tileentities;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.evep.evepmod.init.VanillaEvolutionBlocks;
 import com.evep.evepmod.init.VanillaEvolutionItems;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Table;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
 public class FirstFurnaceRecipes {
@@ -23,17 +25,18 @@ public class FirstFurnaceRecipes {
 	
 	private FirstFurnaceRecipes() 
 	{
+		addFirstFurnaceRecipe(new ItemStack(VanillaEvolutionBlocks.tin_ore), new ItemStack(VanillaEvolutionBlocks.tin_ore), new ItemStack(VanillaEvolutionItems.tin_ingot, 2), 5.0F);
 	}
 
 	
-	public void addSinteringRecipe(ItemStack input1, ItemStack input2, ItemStack result, float experience) 
+	public void addFirstFurnaceRecipe(ItemStack input1, ItemStack input2, ItemStack result, float experience) 
 	{
-		if(getSinteringResult(input1, input2) != ItemStack.EMPTY) return;
+		if(getFirstResult(input1, input2) != ItemStack.EMPTY) return;
 		this.smeltingList.put(input1, input2, result);
 		this.experienceList.put(result, Float.valueOf(experience));
 	}
 	
-	public ItemStack getSinteringResult(ItemStack input1, ItemStack input2) 
+	public ItemStack getFirstResult(ItemStack input1, ItemStack input2) 
 	{
 		for(Entry<ItemStack, Map<ItemStack, ItemStack>> entry : this.smeltingList.columnMap().entrySet()) 
 		{
@@ -61,7 +64,7 @@ public class FirstFurnaceRecipes {
 		return this.smeltingList;
 	}
 	
-	public float getSinteringExperience(ItemStack stack)
+	public float getFirstExperience(ItemStack stack)
 	{
 		for (Entry<ItemStack, Float> entry : this.experienceList.entrySet()) 
 		{
